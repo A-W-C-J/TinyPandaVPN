@@ -5,8 +5,7 @@ import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:sail/app_life_ecycle_reactor.dart';
-import 'package:sail/app_open_manager.dart';
+
 import 'package:sail/constant/app_colors.dart';
 import 'package:sail/constant/app_dimens.dart';
 import 'package:sail/generated/locales.g.dart';
@@ -30,43 +29,18 @@ class HomePageState extends State<HomePage> with WidgetsBindingObserver {
   bool _initialStatus = false;
   final GlobalKey<SliderDrawerState> _key = GlobalKey<SliderDrawerState>();
   DateTime? _lastPressedAt;
-  late InterstitialAd _interstitialAd;
+
 
   bool isAdLoaded = false;
 
   @override
   void initState() {
     WidgetsBinding.instance.addObserver(this);
-    loadInterstitiaLAd();
+
     super.initState();
-
-    AppOpenAdManager appOpenAdManager = AppOpenAdManager()..loadAd();
-    WidgetsBinding.instance
-        .addObserver(AppLifecycleReactor(appOpenAdManager: appOpenAdManager));
   }
 
-  void loadInterstitiaLAd() {
-    InterstitialAd.load(
-        adUnitId: AdHelper.interstitialAdUnitId,
-        request: const AdRequest(),
-        adLoadCallback: InterstitialAdLoadCallback(
-          onAdLoaded: (InterstitialAd ad) {
-            ad.fullScreenContentCallback =
-                FullScreenContentCallback(onAdDismissedFullScreenContent: (ad) {
-              loadInterstitiaLAd();
-            }, onAdFailedToShowFullScreenContent: (ad, error) {
-              loadInterstitiaLAd();
-            });
-            // Keep a reference to the ad so you can show it later.
-            _interstitialAd = ad;
-            isAdLoaded = true;
-          },
-          onAdFailedToLoad: (LoadAdError error) {
-            print('InterstitialAd failed to load: $error');
-            isAdLoaded = false;
-          },
-        ));
-  }
+
 
   @override
   void dispose() {
@@ -135,9 +109,6 @@ class HomePageState extends State<HomePage> with WidgetsBindingObserver {
           slider: _SliderView(
             onItemClick: (id) {
               () => _key.currentState!.closeSlider();
-              if (isAdLoaded) {
-                _interstitialAd.show();
-              }
               if (id == 5) {
                 _appModel.toggleSettingButton();
               } else if (id == 4) {

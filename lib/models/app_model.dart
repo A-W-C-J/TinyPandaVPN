@@ -2,13 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:sail/adapters/leaf_ffi/config.dart';
 import 'package:sail/channels/vpn_manager.dart';
 import 'package:sail/constant/app_strings.dart';
 import 'package:sail/json2dart/V2rayConfig.dart';
 import 'package:sail/models/base_model.dart';
 
-import 'package:sail/utils/common_util.dart';
 
 class AppModel extends BaseModel {
   VpnManager vpnManager = VpnManager();
@@ -18,15 +16,11 @@ class AppModel extends BaseModel {
   bool isFree=true;
   PageController pageController = PageController(initialPage: 0);
   String appTitle = 'TinyPandaVPN';
-  Config config = Config();
-  V2rayConfig v2rayConfig = V2rayConfig();
-  String ConfigTmp = '';
+
   // MethodChannel methodsChannel = MethodChannel("com.captain.bestvpn/status");
 
   AppModel() {
-    rootBundle.loadString('assets/json/v2ray_config.json').then((value) {
-      ConfigTmp = value.toString();
-    });
+
     // methodsChannel.setMethodCallHandler(_nativeCallHandler);
   }
 
