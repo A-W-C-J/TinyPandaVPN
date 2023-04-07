@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defaults>
+  <entry>
+    <key>vipConfig</key>
+    <value>https://08.laomao1.xyz/api/v1/client/subscribe?token=fafe59ccc6222cd0c47fcbbd24790725</value>
+  </entry>
+  <entry>
+    <key>freeConfig</key>
+    <value>https://liangyuandian.club/api/v1/client/subscribe?token=968804fc7528903bd350c199d875dd7c</value>
+  </entry>
+</defaults>

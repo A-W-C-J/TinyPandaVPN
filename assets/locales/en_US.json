@@ -1,0 +1,15 @@
+{
+  "buttons": {
+    "name": "TinyPandaVPN",
+    "selectNode": "Select connection node",
+    "freeNodeTip": "A single trial of a free line lasts for 5 minutes,\nNeed to reconnect or subscribe to a VIP line at that time",
+    "lastTime": "Remaining free time for one time: ${time.inMinutes % 60} minutes ${time.inSeconds % 60} seconds ",
+    "subs": "Subscribe to VIP high-speed lines",
+    "setting": "setting",
+    "Privacy_Policy": "Privacy Policy",
+    "welcome": "Welcome",
+    "minute": "minute",
+    "Second": "Second",
+    "Log": "Log"
+  }
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/del_duplicate_config"
+        android:icon="@drawable/ic_delete_white_24dp"
+        android:title="@string/title_del_duplicate_config"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/del_invalid_config"
+        android:icon="@drawable/ic_delete_white_24dp"
+        android:title="@string/title_del_invalid_config"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ping_all"
+        android:title="@string/title_ping_all_server"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/real_ping_all"
+        android:title="@string/title_real_ping_all_server"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/service_restart"
+        android:title="@string/title_service_restart"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,15 @@
+{
+  "buttons": {
+    "name": "TinyPandaVPN",
+    "selectNode": "选择连接节点",
+    "freeNodeTip":  "免费线路单次试用时长5分钟，\n届时需重新连接或订阅VIP线路",
+    "lastTime":  "单次免费剩余时间： ${time.inMinutes % 60} 分  ${time.inSeconds % 60} 秒 ",
+    "subs": "订阅VIP高速线路",
+    "setting":"设置",
+    "Privacy_Policy": "隐私政策",
+    "welcome": "欢迎光临",
+    "minute": "分",
+    "Second": "秒",
+    "Log": "日志"
+  }
+}
