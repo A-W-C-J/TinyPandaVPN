@@ -9,6 +9,10 @@
 - 删除原Sail项目采用的[Leaf](https://github.com/eycorsican/leaf)内核，换用[AndroidLibV2rayLite](https://github.com/2dust/AndroidLibV2rayLite)
 - AndroidLibV2rayLite相关libv2ray.aar以及libtun2socks.so 文件请移步[AndroidLibV2rayLite](https://github.com/2dust/AndroidLibV2rayLite)自行编译，原作者不鼓励提供已编译版本
 
+### 特别注意
+- 本项目与任何基于此项目上架产品均无关联，本项目也不提供任何节点服务
+- 使用基于本项目二开产品，风险需自行评测
+
 ### 环境
 - Flutter 3.3.9
 - Dart 2.18.5
